@@ -1,32 +1,51 @@
+
 <!doctype html>
 <html lang="es">
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#12304A">
+
     <link rel="icon" href="../favicon.ico">
+
     <title>Buscar servicio | Tecnicos Ya</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../shared.css">
     <link rel="stylesheet" href="./buscar-servicio.css">
-    <link rel="stylesheet" href="/Remigio-Miguel/shared.css">
-    <script src="/Remigio-Miguel/shared.js" defer></script>
+
+    <!-- JavaScript -->
+    <script src="../shared.js" defer></script>
     <script src="./buscar-servicio.js" defer></script>
 </head>
 
 <body>
+
     <header data-site-header></header>
+
     <main>
+
         <section class="page-top">
-            <div class="container"><span class="eyebrow">Encuentra ayuda para tu hogar</span>
+            <div class="container">
+                <span class="eyebrow">Encuentra ayuda para tu hogar</span>
                 <h1>Buscar y filtrar técnicos</h1>
-                <p>Cuéntanos qué necesitas y cuándo. Te mostraremos profesionales disponibles en tu zona.</p>
+                <p>
+                    Cuéntanos qué necesitas y cuándo. Te mostraremos profesionales disponibles en tu zona.
+                </p>
             </div>
         </section>
+
         <section class="page-content">
             <div class="container search-page-grid">
+
                 <form id="service-search-form" class="form-card">
-                    <div class="form-grid"><label class="field"><span>Servicio</span><select name="servicio"
-                                id="service" required>
+
+                    <div class="form-grid">
+
+                        <label class="field">
+                            <span>Servicio</span>
+                            <select name="servicio" id="service" required>
                                 <option value="">Selecciona un servicio</option>
                                 <option>Gasfitería</option>
                                 <option>Electricidad</option>
@@ -37,8 +56,12 @@
                                 <option>Carpintería</option>
                                 <option>Pintura</option>
                                 <option>Mantenimiento</option>
-                            </select></label><label class="field"><span>Distrito</span><select name="distrito"
-                                id="district" required>
+                            </select>
+                        </label>
+
+                        <label class="field">
+                            <span>Distrito</span>
+                            <select name="distrito" id="district" required>
                                 <option value="">Selecciona tu distrito</option>
                                 <option>Surco</option>
                                 <option>San Borja</option>
@@ -47,36 +70,77 @@
                                 <option>La Molina</option>
                                 <option>Magdalena</option>
                                 <option>Jesús María</option>
-                            </select></label><label class="field"><span>Fecha preferida</span><input type="date"
-                                name="fecha" id="date"></label><label class="field"><span>Horario</span><select
-                                name="horario">
+                            </select>
+                        </label>
+
+                        <label class="field">
+                            <span>Fecha preferida</span>
+                            <input type="date" name="fecha" id="date">
+                        </label>
+
+                        <label class="field">
+                            <span>Horario</span>
+                            <select name="horario">
                                 <option value="">Cualquier horario</option>
                                 <option>Mañana</option>
                                 <option>Tarde</option>
                                 <option>Noche</option>
-                            </select></label><label class="field field--wide"><span>Describe brevemente el
-                                problema</span><textarea name="problema" id="problem"
+                            </select>
+                        </label>
+
+                        <label class="field field--wide">
+                            <span>Describe brevemente el problema</span>
+                            <textarea
+                                name="problema"
+                                id="problem"
                                 placeholder="Ejemplo: fuga de agua debajo del lavadero de la cocina"
-                                required></textarea></label></div>
-                    <div class="form-actions"><button class="button" type="submit">Buscar técnicos <span
-                                aria-hidden="true">↗</span></button><a class="button button--secondary"
-                            href="/servicios/index.html">Ver categorías</a></div>
+                                required
+                            ></textarea>
+                        </label>
+
+                    </div>
+
+                    <div class="form-actions">
+                        <button class="button" type="submit">
+                            Buscar técnicos <span aria-hidden="true">↗</span>
+                        </button>
+
+                        <a class="button button--secondary" href="../servicios/index.html">
+                            Ver categorías
+                        </a>
+                    </div>
+
                 </form>
+
                 <aside class="search-aside">
+
                     <div class="card card--pad">
                         <p class="section-heading">Tu búsqueda</p>
-                        <div class="search-summary" id="search-summary"><span class="pill">Elige un servicio</span><span
-                                class="pill">Lima</span></div>
-                        <p class="muted">Compara a los técnicos por calificación, experiencia, disponibilidad y precio
-                            referencial.</p>
+
+                        <div class="search-summary" id="search-summary">
+                            <span class="pill">Elige un servicio</span>
+                            <span class="pill">Lima</span>
+                        </div>
+
+                        <p class="muted">
+                            Compara a los técnicos por calificación, experiencia, disponibilidad y precio referencial.
+                        </p>
                     </div>
-                    <div class="notice"><strong>Sin cobros reales</strong><br>Este es un prototipo académico. La
-                        solicitud y el pago son simulados.</div>
+
+                    <div class="notice">
+                        <strong>Sin cobros reales</strong>
+                        <br>
+                        Este es un prototipo académico. La solicitud y el pago son simulados.
+                    </div>
+
                 </aside>
+
             </div>
         </section>
-    </main>
-    <footer data-site-footer></footer>
-</body>
 
+    </main>
+
+    <footer data-site-footer></footer>
+
+</body>
 </html>

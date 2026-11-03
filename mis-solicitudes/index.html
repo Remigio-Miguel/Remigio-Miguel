@@ -1,59 +1,110 @@
+
 <!doctype html>
 <html lang="es">
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#12304A">
+
     <link rel="icon" href="../favicon.ico">
+
     <title>Mis solicitudes | Tecnicos Ya</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../shared.css">
     <link rel="stylesheet" href="./mis-solicitudes.css">
-    <link rel="stylesheet" href="/Remigio-Miguel/shared.css">
-    <script src="/Remigio-Miguel/shared.js" defer></script>
-    <script src="/page-utils.js" defer></script>
+
+    <!-- JavaScript -->
+    <script src="../shared.js" defer></script>
+    <script src="../page-utils.js" defer></script>
     <script src="./mis-solicitudes.js" defer></script>
 </head>
 
 <body>
+
     <header data-site-header></header>
+
     <main>
+
         <section class="page-top">
-            <div class="container"><span class="eyebrow">Tu actividad en Tecnicos Ya</span>
+            <div class="container">
+                <span class="eyebrow">Tu actividad en Tecnicos Ya</span>
                 <h1>Mis solicitudes</h1>
                 <p>Consulta el estado de tus servicios y las calificaciones pendientes.</p>
             </div>
         </section>
+
         <section class="page-content">
             <div class="container requests-layout">
+
                 <div>
+
                     <div class="request-section-heading">
-                        <h2>Solicitudes pendientes</h2><span id="request-total" class="pill">0 solicitudes</span>
+                        <h2>Solicitudes pendientes</h2>
+                        <span id="request-total" class="pill">0 solicitudes</span>
                     </div>
+
                     <div id="request-list" class="request-list"></div>
+
                     <div class="request-section-heading completed-heading">
                         <h2>Servicios realizados</h2>
                     </div>
+
                     <div class="card request-row">
-                        <div class="request-description"><span class="request-category">Mantenimiento · Luis
-                                Ramírez</span>
+
+                        <div class="request-description">
+                            <span class="request-category">
+                                Mantenimiento · Luis Ramírez
+                            </span>
+
                             <p>Revisión de una puerta y cambio de bisagras.</p>
-                            <div class="search-summary"><span class="pill">Miraflores</span><span class="pill">10
-                                    oct.</span></div>
+
+                            <div class="search-summary">
+                                <span class="pill">Miraflores</span>
+                                <span class="pill">10 oct.</span>
+                            </div>
                         </div>
-                        <div class="request-controls"><span class="status status--done">Completado</span><a
-                                href="../calificar/index.html?tecnico=luis" class="button button--secondary">Calificar
-                                servicio</a></div>
-                    </div><a class="button requests-cta" href="/buscar-servicio/index.html">Solicitar otro servicio ↗</a>
+
+                        <div class="request-controls">
+                            <span class="status status--done">Completado</span>
+
+                            <a
+                                href="../calificar/index.html?tecnico=luis"
+                                class="button button--secondary"
+                            >
+                                Calificar servicio
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <a class="button requests-cta" href="../buscar-servicio/index.html">
+                        Solicitar otro servicio ↗
+                    </a>
+
                 </div>
+
                 <aside class="card card--pad requests-aside">
+
                     <p class="section-heading">Tu cuenta</p>
-                    <p class="muted">Tus solicitudes se guardan localmente en este navegador para este prototipo.</p><a
-                        class="text-link" href="/mi-perfil/index.html">Ver mi perfil →</a>
+
+                    <p class="muted">
+                        Tus solicitudes se guardan localmente en este navegador para este prototipo.
+                    </p>
+
+                    <a class="text-link" href="../mi-perfil/index.html">
+                        Ver mi perfil →
+                    </a>
+
                 </aside>
+
             </div>
         </section>
-    </main>
-    <footer data-site-footer></footer>
-</body>
 
+    </main>
+
+    <footer data-site-footer></footer>
+
+</body>
 </html>

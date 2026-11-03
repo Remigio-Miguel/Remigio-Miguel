@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="es">
 
@@ -5,61 +6,116 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="#12304A">
+
     <link rel="icon" href="../favicon.ico">
+
     <title>Técnicos disponibles | Tecnicos Ya</title>
+
+    <link rel="stylesheet" href="../shared.css">
     <link rel="stylesheet" href="./resultados.css">
-    <link rel="stylesheet" href="/Remigio-Miguel/shared.css">
-    <script src="/Remigio-Miguel/shared.js" defer></script>
-    <script src="/page-utils.js" defer></script>
+
+    <script src="../shared.js" defer></script>
+    <script src="../page-utils.js" defer></script>
     <script src="./resultados.js" defer></script>
 </head>
 
 <body>
+
     <header data-site-header></header>
+
     <main>
+
         <section class="page-top">
-            <div class="container"><span class="eyebrow">Profesionales de confianza</span>
+            <div class="container">
+                <span class="eyebrow">Profesionales de confianza</span>
                 <h1>Técnicos disponibles</h1>
-                <p id="result-description">Compara profesionales para tu servicio y elige quién atenderá tu hogar.</p>
+                <p id="result-description">
+                    Compara profesionales para tu servicio y elige quién atenderá tu hogar.
+                </p>
             </div>
         </section>
+
         <section class="page-content">
             <div class="container results-layout">
+
                 <aside class="filter-panel">
+
                     <h2>Filtrar resultados</h2>
+
                     <div class="filter-group">
-                        <h3>Calificación mínima</h3><label class="check-row"><input type="radio" name="rating" value="0"
-                                checked> Cualquiera</label><label class="check-row"><input type="radio" name="rating"
-                                value="4.8"> 4.8 o más</label>
+                        <h3>Calificación mínima</h3>
+
+                        <label class="check-row">
+                            <input type="radio" name="rating" value="0" checked>
+                            Cualquiera
+                        </label>
+
+                        <label class="check-row">
+                            <input type="radio" name="rating" value="4.8">
+                            4.8 o más
+                        </label>
                     </div>
+
                     <div class="filter-group">
-                        <h3>Disponibilidad</h3><label class="check-row"><input type="checkbox" name="available">
-                            Disponible hoy</label>
+                        <h3>Disponibilidad</h3>
+
+                        <label class="check-row">
+                            <input type="checkbox" name="available">
+                            Disponible hoy
+                        </label>
                     </div>
+
                     <div class="filter-group">
-                        <h3>Distrito</h3><select id="district-filter">
+                        <h3>Distrito</h3>
+
+                        <select id="district-filter">
                             <option value="">Todos los distritos</option>
                             <option>Surco</option>
                             <option>San Borja</option>
                             <option>Miraflores</option>
                         </select>
                     </div>
-                    <div class="filter-group"><label class="field"><span>Ordenar por</span><select id="sort-results">
+
+                    <div class="filter-group">
+                        <label class="field">
+                            <span>Ordenar por</span>
+
+                            <select id="sort-results">
                                 <option value="recommended">Recomendados</option>
                                 <option value="rating">Mejor calificación</option>
                                 <option value="price">Menor precio</option>
-                            </select></label></div><a class="text-link" href="/buscar-servicio/index.html">Editar búsqueda</a>
+                            </select>
+                        </label>
+                    </div>
+
+                    <a class="text-link" href="../buscar-servicio/index.html">
+                        Editar búsqueda
+                    </a>
+
                 </aside>
+
                 <div>
+
                     <p class="results-count" id="results-count" aria-live="polite"></p>
+
                     <div id="technician-list" class="results-list"></div>
-                    <div class="results-footer"><span id="result-status">3 profesionales</span><a
-                            href="/buscar-servicio/index.html" class="button button--secondary">Cambiar búsqueda</a></div>
+
+                    <div class="results-footer">
+                        <span id="result-status">3 profesionales</span>
+
+                        <a href="../buscar-servicio/index.html" class="button button--secondary">
+                            Cambiar búsqueda
+                        </a>
+                    </div>
+
                 </div>
+
             </div>
         </section>
-    </main>
-    <footer data-site-footer></footer>
-</body>
 
+    </main>
+
+    <footer data-site-footer></footer>
+
+</body>
 </html>

@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="es">
 
@@ -5,76 +6,160 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="#12304A">
+
     <link rel="icon" href="../favicon.ico">
+
     <title>Reserva o solicitud | Tecnicos Ya</title>
+
+    <link rel="stylesheet" href="../shared.css">
     <link rel="stylesheet" href="./reservar.css">
-    <link rel="stylesheet" href="/Remigio-Miguel/shared.css">
-    <script src="/Remigio-Miguel/shared.js" defer></script>
-    <script src="/page-utils.js" defer></script>
+
+    <script src="../shared.js" defer></script>
+    <script src="../page-utils.js" defer></script>
     <script src="./reservar.js" defer></script>
 </head>
 
 <body>
+
     <header data-site-header></header>
+
     <main>
+
         <section class="page-top">
-            <div class="container"><a class="text-link" id="back-profile" href="/perfil-tecnico/index.html">← Volver al
-                    técnico</a>
+            <div class="container">
+
+                <a class="text-link" id="back-profile" href="../perfil-tecnico/index.html">
+                    ← Volver al técnico
+                </a>
+
                 <h1>Reserva o solicitud</h1>
                 <p>Confirma los datos de la visita y cuéntale al técnico qué necesita tu hogar.</p>
+
             </div>
         </section>
+
         <section class="page-content">
             <div class="container booking-layout">
+
                 <form id="booking-form" class="form-card">
-                    <div class="booking-tech"><img id="booking-image" src="../technician-carlos.jpeg"
-                            alt="Carlos Mendoza">
-                        <div><span class="muted">Técnico seleccionado</span><strong id="booking-name">Carlos
-                                Mendoza</strong><span id="booking-specialty">Gasfitería y reparaciones · Surco</span>
+
+                    <div class="booking-tech">
+
+                        <img
+                            id="booking-image"
+                            src="../technician-carlos.jpeg"
+                            alt="Carlos Mendoza"
+                        >
+
+                        <div>
+                            <span class="muted">Técnico seleccionado</span>
+                            <strong id="booking-name">Carlos Mendoza</strong>
+                            <span id="booking-specialty">Gasfitería y reparaciones · Surco</span>
                         </div>
+
                     </div>
-                    <div class="booking-service-title"><span class="section-heading">Datos del servicio</span><span
-                            class="status">Precio referencial</span></div>
-                    <div class="form-grid"><label class="field"><span>Servicio</span><select name="servicio"
-                                id="booking-service" required>
+
+                    <div class="booking-service-title">
+                        <span class="section-heading">Datos del servicio</span>
+                        <span class="status">Precio referencial</span>
+                    </div>
+
+                    <div class="form-grid">
+
+                        <label class="field">
+                            <span>Servicio</span>
+                            <select name="servicio" id="booking-service" required>
                                 <option>Gasfitería</option>
                                 <option>Electricidad</option>
                                 <option>Cerrajería</option>
                                 <option>Limpieza</option>
                                 <option>Pintura</option>
                                 <option>Mantenimiento</option>
-                            </select></label><label class="field"><span>Distrito</span><select name="distrito"
-                                id="booking-district" required>
+                            </select>
+                        </label>
+
+                        <label class="field">
+                            <span>Distrito</span>
+                            <select name="distrito" id="booking-district" required>
                                 <option>Surco</option>
                                 <option>San Borja</option>
                                 <option>Miraflores</option>
                                 <option>San Isidro</option>
                                 <option>La Molina</option>
-                            </select></label><label class="field"><span>Fecha preferida</span><input name="fecha"
-                                type="date" required></label><label class="field"><span>Horario preferido</span><select
-                                name="horario" required>
+                            </select>
+                        </label>
+
+                        <label class="field">
+                            <span>Fecha preferida</span>
+                            <input name="fecha" type="date" required>
+                        </label>
+
+                        <label class="field">
+                            <span>Horario preferido</span>
+                            <select name="horario" required>
                                 <option value="">Selecciona un horario</option>
                                 <option>Mañana · 9:00 am — 12:00 pm</option>
                                 <option>Tarde · 2:00 pm — 5:00 pm</option>
                                 <option>Noche · 6:00 pm — 8:00 pm</option>
-                            </select></label><label class="field field--wide"><span>Describe el trabajo</span><textarea
-                                name="problema" placeholder="Cuéntale al técnico qué ocurre y dónde"
-                                required></textarea></label><label class="field field--wide"><span>Dirección de
-                                atención</span><input name="direccion" placeholder="Calle, número y referencia"
-                                required></label></div>
-                    <div class="form-actions"><button class="button" type="submit">Enviar solicitud ↗</button><a
-                            class="button button--secondary" href="/resultados/index.html">Elegir otro técnico</a></div>
+                            </select>
+                        </label>
+
+                        <label class="field field--wide">
+                            <span>Describe el trabajo</span>
+                            <textarea
+                                name="problema"
+                                placeholder="Cuéntale al técnico qué ocurre y dónde"
+                                required
+                            ></textarea>
+                        </label>
+
+                        <label class="field field--wide">
+                            <span>Dirección de atención</span>
+                            <input
+                                name="direccion"
+                                placeholder="Calle, número y referencia"
+                                required
+                            >
+                        </label>
+
+                    </div>
+
+                    <div class="form-actions">
+
+                        <button class="button" type="submit">
+                            Enviar solicitud ↗
+                        </button>
+
+                        <a class="button button--secondary" href="../resultados/index.html">
+                            Elegir otro técnico
+                        </a>
+
+                    </div>
+
                 </form>
+
                 <aside class="booking-price card card--pad">
+
                     <p class="section-heading">Precio referencial</p>
+
                     <p class="price-range" id="booking-price">S/ 80 — 140</p>
-                    <p class="muted">El precio final puede variar según el diagnóstico del técnico.</p>
-                    <div class="notice">No se realizará ningún cobro. Esta solicitud forma parte del prototipo.</div>
+
+                    <p class="muted">
+                        El precio final puede variar según el diagnóstico del técnico.
+                    </p>
+
+                    <div class="notice">
+                        No se realizará ningún cobro. Esta solicitud forma parte del prototipo.
+                    </div>
+
                 </aside>
+
             </div>
         </section>
-    </main>
-    <footer data-site-footer></footer>
-</body>
 
+    </main>
+
+    <footer data-site-footer></footer>
+
+</body>
 </html>
