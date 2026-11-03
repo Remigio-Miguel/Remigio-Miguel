@@ -1,62 +1,41 @@
 (() => {
-  // Detectar automáticamente si estamos en GitHub Pages (ej. /Remigio-Miguel/) o en raíz local
-  const pathSegments = window.location.pathname.split("/").filter(Boolean);
-  // Si el primer segmento no es una carpeta de nuestra app, asumimos que es el nombre del repositorio en GitHub
-  const repoName = (pathSegments.length > 0 && !["buscar-servicio", "calificar", "mi-perfil", "mis-solicitudes", "perfil-tecnico", "reservar", "resultados", "servicios"].includes(pathSegments[0])) 
-    ? `/${pathSegments[0]}` 
-    : "";
-
-  // Calcular cuántos niveles debemos subir usando "../" basándose en la profundidad actual
-  const isSubpage = window.location.pathname.includes("/buscar-servicio/") ||
-                    window.location.pathname.includes("/calificar/") ||
-                    window.location.pathname.includes("/mi-perfil/") ||
-                    window.location.pathname.includes("/mis-solicitudes/") ||
-                    window.location.pathname.includes("/perfil-tecnico/") ||
-                    window.location.pathname.includes("/reservar/") ||
-                    window.location.pathname.includes("/resultados/") ||
-                    window.location.pathname.includes("/servicios/");
-
-  const prefix = isSubpage ? "../" : `${repoName}/` || "./";
-
-  const sitePath = (path) => {
-    // Si la ruta empieza con barra, la adaptamos al repositorio o raíz real
-    if (path.startsWith("/")) {
-      return `${repoName}${path}`;
-    }
-    return isSubpage ? `../${path}` : `${repoName}/${path}`.replace(/\/+/g, "/");
-  };
+  const repo = "/Remigio-Miguel";
 
   const primary = [
-    ["Inicio", `${repoName}/` || "./"],
-    ["Servicios", `${repoName}/servicios/` || "../servicios/"],
-    ["Buscar servicio", `${repoName}/buscar-servicio/` || "../buscar-servicio/"],
+    ["Inicio", `${repo}/index.html`],
+    ["Servicios", `${repo}/servicios/index.html`],
+    ["Buscar servicio", `${repo}/buscar-servicio/index.html`],
   ];
   const account = [
-    ["Mis solicitudes", `${repoName}/mis-solicitudes/` || "../mis-solicitudes/"],
-    ["Mi perfil", `${repoName}/mi-perfil/` || "../mi-perfil/"],
+    ["Mis solicitudes", `${repo}/mis-solicitudes/index.html`],
+    ["Mi perfil", `${repo}/mi-perfil/index.html`],
   ];
   const footerGroups = [
-    ["Explorar", [["Inicio", `${repoName}/`], ["Servicios", `${repoName}/servicios/`], ["Buscar servicio", `${repoName}/buscar-servicio/`]]],
-    ["Mi cuenta", [["Mis solicitudes", `${repoName}/mis-solicitudes/`], ["Mi perfil", `${repoName}/mi-perfil/`]]],
+    ["Explorar", primary],
+    ["Mi cuenta", account],
   ];
 
   const currentPath = window.location.pathname;
-  const navLink = ([label, href]) => `<a href="${href}"${currentPath.endsWith(href) || (href === `${repoName}/` && currentPath.endsWith("/")) ? ' aria-current="page"' : ""}>${label}</a>`;
+  const navLink = ([label, href]) => `<a href="${href}"${currentPath.endsWith(href) ? ' aria-current="page"' : ""}>${label}</a>`;
 
   const header = document.querySelector("[data-site-header]");
   if (header) {
     header.className = "site-header";
     header.innerHTML = `
       <div class="header-main">
-        <a class="brand" href="${repoName}/" aria-label="Tecnicos YA, inicio">
-          <img src="${isSubpage ? "../logo.png" : "./logo.png"}" alt="Logo Tecnicos YA" class="brand-logo">
+        <a class="brand" href="${repo}/index.html" aria-label="Tecnicos YA, inicio">
+          <img src="${repo}/logo.png" alt="Logo Tecnicos YA" class="brand-logo" style="width: 38px; height: 38px; object-fit: cover; border-radius: 8px;">
+          <span>
+            <span class="brand-name">Tecnicos YA<span style="color:var(--teal)">.</span></span>
+            <span class="brand-caption">marketplace de servicios</span>
+          </span>
         </a>
         <nav class="main-nav" aria-label="Navegación principal">
           ${primary.map(navLink).join("")}
         </nav>
         <div class="header-actions">
-          <a class="header-login" href="${repoName}/mis-solicitudes/index.html">Mis solicitudes</a>
-          <a class="header-tech" href="${repoName}/mi-perfil/index.html">Mi perfil</a>
+          <a class="header-login" href="${repo}/mis-solicitudes/index.html">Mis solicitudes</a>
+          <a class="header-tech" href="${repo}/mi-perfil/index.html">Mi perfil</a>
         </div>
       </div>
       <nav class="mobile-nav" aria-label="Navegación móvil">
@@ -109,5 +88,5 @@
     window.setTimeout(() => el.remove(), 3000);
   };
 
-  window.Hogario = { read, write, toast, url: sitePath };
+  window.Hogario = { read, write, toast };
 })();
