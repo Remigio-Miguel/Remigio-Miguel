@@ -1,30 +1,36 @@
 (() => {
-  const repo = "/Remigio-Miguel";
+  const isGitHubPages = window.location.hostname.includes("github.io");
+  const repoPrefix = isGitHubPages ? "/Remigio-Miguel" : "";
 
   const primary = [
-    ["Inicio", `${repo}/index.html`],
-    ["Servicios", `${repo}/servicios/index.html`],
-    ["Buscar servicio", `${repo}/buscar-servicio/index.html`],
+    ["Inicio", `${repoPrefix}/index.html`],
+    ["Servicios", `${repoPrefix}/servicios/index.html`],
+    ["Buscar servicio", `${repoPrefix}/buscar-servicio/index.html`],
   ];
+  
   const account = [
-    ["Mis solicitudes", `${repo}/mis-solicitudes/index.html`],
-    ["Mi perfil", `${repo}/mi-perfil/index.html`],
+    ["Mis solicitudes", `${repoPrefix}/mis-solicitudes/index.html`],
+    ["Mi perfil", `${repoPrefix}/mi-perfil/index.html`],
   ];
+  
   const footerGroups = [
     ["Explorar", primary],
     ["Mi cuenta", account],
   ];
 
   const currentPath = window.location.pathname;
-  const navLink = ([label, href]) => `<a href="${href}"${currentPath.endsWith(href) ? ' aria-current="page"' : ""}>${label}</a>`;
+  const navLink = ([label, href]) => {
+    const isActive = currentPath.endsWith(href) || (href === `${repoPrefix}/index.html` && (currentPath.endsWith("/") || currentPath.endsWith("/Remigio-Miguel/")));
+    return `<a href="${href}"${isActive ? ' aria-current="page"' : ""}>${label}</a>`;
+  };
 
   const header = document.querySelector("[data-site-header]");
   if (header) {
     header.className = "site-header";
     header.innerHTML = `
       <div class="header-main">
-        <a class="brand" href="${repo}/index.html" aria-label="Tecnicos YA, inicio">
-          <img src="${repo}/logo.png" alt="Logo Tecnicos YA" class="brand-logo" style="width: 38px; height: 38px; object-fit: cover; border-radius: 8px;">
+        <a class="brand" href="${repoPrefix}/index.html" aria-label="Tecnicos YA, inicio">
+          <img src="${repoPrefix}/logo.png" alt="Logo Tecnicos YA" class="brand-logo" style="width: 38px; height: 38px; object-fit: cover; border-radius: 8px;">
           <span>
             <span class="brand-name">Tecnicos YA<span style="color:var(--teal)">.</span></span>
             <span class="brand-caption">marketplace de servicios</span>
@@ -34,8 +40,8 @@
           ${primary.map(navLink).join("")}
         </nav>
         <div class="header-actions">
-          <a class="header-login" href="${repo}/mis-solicitudes/index.html">Mis solicitudes</a>
-          <a class="header-tech" href="${repo}/mi-perfil/index.html">Mi perfil</a>
+          <a class="header-login" href="${repoPrefix}/mis-solicitudes/index.html">Mis solicitudes</a>
+          <a class="header-tech" href="${repoPrefix}/mi-perfil/index.html">Mi perfil</a>
         </div>
       </div>
       <nav class="mobile-nav" aria-label="Navegación móvil">
@@ -75,6 +81,7 @@
       return fallback;
     }
   };
+  
   const write = (key, value) => localStorage.setItem(key, JSON.stringify(value));
   
   const toast = (message) => {
