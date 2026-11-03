@@ -1,0 +1,5 @@
+.rating-card{max-width:700px;margin:auto}.rating-card .booking-tech{display:flex;align-items:center;gap:14px;margin-bottom:24px}.rating-card .booking-tech img{width:68px;height:68px;flex:0 0 68px;border-radius:12px;object-fit:cover}.rating-card .booking-tech div{display:grid;gap:4px}.rating-card .booking-tech strong{color:var(--navy);font-size:17px}.rating-card .booking-tech span{color:var(--muted);font-size:12px}.rating-fieldset{padding:0;margin:0 0 23px;border:0}.rating-fieldset legend{margin-bottom:12px;color:#44515a;font-size:13px;font-weight:750}.rating-fieldset .field-hint{display:block;margin-top:8px}.review-field{margin-bottom:12px}.rating-card .form-actions{margin-top:19px}.rating-success{margin-top:18px}.rating-stars button{min-width:48px;min-height:48px;transition:color .15s,background .15s,border-color .15s,transform .15s}.rating-stars button:hover{transform:translateY(-2px)}
+.rating-card{box-shadow:0 12px 34px rgba(18,48,74,.07)}
+.rating-fieldset legend{font-size:14px}
+.rating-card .form-actions .button{min-width:180px}
+@media(max-width:480px){.rating-stars{gap:8px}.rating-stars button{flex:1}.rating-card .form-actions .button{width:100%}}

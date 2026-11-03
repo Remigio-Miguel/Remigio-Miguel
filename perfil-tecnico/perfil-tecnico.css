@@ -1,0 +1,9 @@
+.profile-page-title{display:flex;justify-content:space-between;align-items:end;gap:18px}.profile-page-title h1{margin:14px 0 4px}.profile-page-title p{margin:0;color:var(--muted)}.profile-main .profile-head{padding-bottom:20px;border-bottom:1px solid var(--line)}.profile-specialty{margin-top:9px!important}.profile-data{margin:12px 0 20px}.subheading{margin:22px 0 12px;font-size:17px}.pill-list{display:flex;flex-wrap:wrap;gap:8px}.profile-side{display:grid;align-content:start;gap:15px}.review{padding:13px 0;border-bottom:1px solid var(--line)}.review:last-child{border:0}.review strong{font-size:12px}.review strong span{padding-left:8px;color:#e4a631;letter-spacing:.08em}.review p{margin:7px 0 0;color:var(--muted);font-size:13px}@media(max-width:650px){.profile-page-title{align-items:flex-start;flex-direction:column}.profile-head{align-items:flex-start}}
+.profile-page-title .button{min-width:190px}
+.profile-main,.profile-side>.card{box-shadow:0 10px 30px rgba(18,48,74,.055)}
+.profile-main .profile-head img{width:112px;height:112px;border:3px solid #fff;box-shadow:0 5px 16px rgba(18,48,74,.12)}
+.profile-data{margin-top:17px}
+.profile-side>.card{padding:25px}
+.review{padding-block:16px}
+@media(max-width:850px){.profile-side>.card{padding:20px}}
+@media(max-width:650px){.profile-page-title .button{width:100%}.profile-main .profile-head img{width:88px;height:88px}.profile-side>.card{padding:18px}}

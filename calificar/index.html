@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#12304A">
+    <link rel="icon" href="../favicon.ico">
+    <title>Calificar técnico | Tecnicos Ya</title>
+    <link rel="stylesheet" href="../shared.css">
+    <link rel="stylesheet" href="./calificar.css">
+    <script src="../shared.js" defer></script>
+    <script src="../page-utils.js" defer></script>
+    <script src="./calificar.js" defer></script>
+</head>
+
+<body>
+    <header data-site-header></header>
+    <main>
+        <section class="page-top">
+            <div class="container"><span class="eyebrow">Tu opinión ayuda a otros</span>
+                <h1>Calificar técnico</h1>
+                <p>Cuéntanos cómo fue tu experiencia con el servicio.</p>
+            </div>
+        </section>
+        <section class="page-content">
+            <div class="container">
+                <form id="rating-form" class="form-card rating-card">
+                    <div class="booking-tech"><img id="rating-image" src="../technician-carlos.jpeg"
+                            alt="Carlos Mendoza">
+                        <div><strong id="rating-name">Carlos Mendoza</strong><span id="rating-specialty">Gasfitería ·
+                                Servicio realizado</span></div>
+                    </div>
+                    <fieldset class="rating-fieldset">
+                        <legend>¿Qué calificación le das al servicio?</legend>
+                        <div class="rating-stars" role="radiogroup" aria-label="Calificación de una a cinco estrellas">
+                            <button type="button" data-rating="1" aria-label="1 estrella">★</button><button
+                                type="button" data-rating="2" aria-label="2 estrellas">★</button><button type="button"
+                                data-rating="3" aria-label="3 estrellas">★</button><button type="button" data-rating="4"
+                                aria-label="4 estrellas">★</button><button type="button" data-rating="5"
+                                aria-label="5 estrellas">★</button></div><input id="rating-value" name="rating"
+                            type="hidden"><span class="field-hint" id="rating-hint">Selecciona de 1 a 5
+                            estrellas.</span>
+                    </fieldset><label class="field review-field"><span>Escribe una reseña</span><textarea name="review"
+                            placeholder="Comparte qué te pareció la atención" maxlength="500"></textarea><span
+                            class="field-hint">Máximo 500 caracteres.</span></label>
+                    <div class="form-actions"><button class="button" type="submit">Enviar calificación</button><a
+                            class="button button--secondary" href="/mis-solicitudes/index.html">Volver a mis solicitudes</a></div>
+                    <p id="rating-success" class="notice is-hidden" role="status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer data-site-footer></footer>
+</body>
+
+</html>

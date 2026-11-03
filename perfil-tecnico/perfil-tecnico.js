@@ -1,0 +1,14 @@
+const tech = window.HogarioPages.selectedTechnician();
+document.title = `${tech.name} · Hogario`;
+document.querySelector("#profile-name").textContent = tech.name;
+document.querySelector("#profile-specialty").textContent = tech.specialty;
+document.querySelector("#profile-image").src = tech.image;
+document.querySelector("#profile-image").alt = tech.name;
+document.querySelector("#profile-service").textContent = tech.specialty;
+document.querySelector("#profile-rating").textContent = `${tech.rating} / 5 · ${tech.reviews}`;
+document.querySelector("#profile-experience").textContent = tech.experience;
+document.querySelector("#profile-price").textContent = tech.price;
+document.querySelector("#profile-availability").textContent = tech.available;
+document.querySelector("#profile-district").textContent = tech.district;
+document.querySelector("#profile-services").innerHTML = tech.services.map((service) => `<span class="pill">${service}</span>`).join("");
+document.querySelector("#book-technician").href = window.Hogario.url(`/reservar/?tecnico=${tech.id}`);

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#12304A"><link rel="icon" href="favicon.ico">
+  <meta name="description" content="Encuentra técnicos confiables para los servicios de tu hogar en Lima.">
+  <title>Hogario — servicios para tu hogar</title>
+  <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="home.css">
+  <script src="shared.js" defer></script>
+  <script src="home.js" defer></script>
+</head>
+<body>
+  <header data-site-header></header>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Servicios para el hogar · Lima</span>
+          <h1>Encuentra un técnico confiable para tu hogar.</h1>
+          <p class="lead">Compara alternativas, revisa precios y solicita un servicio en Lima sin perder tiempo buscando recomendaciones.</p>
+          <div class="button-row"><a class="button" href="/buscar-servicio/index.html">Buscar un técnico <span aria-hidden="true">↗</span></a><a class="button button--secondary" href="/servicios/index.html">Ver servicios</a></div>
+          <a class="text-link home-account-link" href="/mi-perfil/index.html">Revisar mi perfil</a>
+          <div class="trust-list"><span>✓ Técnicos verificados</span><span>◷ Atención según disponibilidad</span></div>
+        </div>
+        <div class="hero-visual">
+          <img src="hogario-home.jpeg" alt="Interior luminoso de un hogar moderno" fetchpriority="high">
+          <div class="hero-search">
+            <span class="eyebrow">¿Qué necesitas?</span>
+            <h2>Busca ayuda para tu hogar</h2>
+            <form id="home-search" action="/buscar-servicio/index.html">
+              <label class="field"><span>Servicio</span><select name="servicio" required><option value="">Selecciona una categoría</option><option>Gasfitería</option><option>Electricidad</option><option>Cerrajería</option><option>Pintura</option><option>Mantenimiento</option><option>Limpieza</option></select></label>
+              <label class="field"><span>Distrito</span><select name="distrito" required><option value="">Selecciona tu distrito</option><option>Surco</option><option>Miraflores</option><option>San Borja</option><option>San Isidro</option><option>La Molina</option></select></label>
+              <button class="button" type="submit">Buscar técnico <span aria-hidden="true">↗</span></button>
+            </form>
+            <p class="home-search-note">Precios referenciales · atención en Lima</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container"><div class="section-title-row"><div><p class="section-heading">Categorías de servicios</p><h2>Ayuda para cada rincón de tu hogar</h2></div><a class="text-link" href="/servicios/index.html">Ver todos los servicios →</a></div>
+        <div class="service-grid">
+          <a class="service-card" href="/buscar-servicio/?servicio=Gasfiter%C3%ADa"><img src="hogario-gas.jpeg" alt="Técnico revisando una instalación de agua" loading="lazy"><div class="service-card__body"><h3>Gasfitería</h3><p>Fugas, grifería y tuberías</p></div></a>
+          <a class="service-card" href="/buscar-servicio/?servicio=Electricidad"><img src="hogario-electric.jpeg" alt="Electricista trabajando en una instalación del hogar" loading="lazy"><div class="service-card__body"><h3>Electricidad</h3><p>Instalaciones y reparaciones</p></div></a>
+          <a class="service-card" href="/buscar-servicio/?servicio=Cerrajer%C3%ADa"><img src="hogario-locksmith.jpeg" alt="Herramientas de cerrajería" loading="lazy"><div class="service-card__body"><h3>Cerrajería</h3><p>Chapas, cerraduras y llaves</p></div></a>
+          <a class="service-card" href="/buscar-servicio/?servicio=Pintura"><img src="hogario-paint.jpeg" alt="Pintor renovando una pared interior" loading="lazy"><div class="service-card__body"><h3>Pintura</h3><p>Renueva tus espacios</p></div></a>
+          <a class="service-card" href="/buscar-servicio/?servicio=Mantenimiento"><img src="hogario-home.jpeg" alt="Sala de estar luminosa en un hogar cuidado" loading="lazy"><div class="service-card__body"><h3>Mantenimiento</h3><p>Reparaciones generales</p></div></a>
+        </div>
+      </div>
+    </section>
+    <section class="section section--soft">
+      <div class="container home-steps"><div><p class="section-heading">Una búsqueda sencilla</p><h2>Del problema a la solución en pocos pasos.</h2><p class="muted">Compara opciones y solicita un servicio con la información clara desde el inicio.</p></div><div class="inline-steps"><article class="inline-step"><b>01</b><h3>Cuéntanos qué necesitas</h3><p>Elige el servicio, tu distrito y el horario.</p></article><article class="inline-step"><b>02</b><h3>Compara técnicos</h3><p>Revisa experiencia, precio y reseñas.</p></article><article class="inline-step"><b>03</b><h3>Envía tu solicitud</h3><p>Confirma los datos de la visita.</p></article></div></div>
+    </section>
+    <section class="section"><div class="container"><p class="section-heading">Lo que importa al elegir</p><div class="benefit-grid"><article><span>✓</span><h3>Técnicos verificados</h3><p>Conoce quién atenderá tu hogar.</p></article><article><span>ₛ/</span><h3>Precios referenciales</h3><p>Compara opciones antes de solicitar.</p></article><article><span>★</span><h3>Reseñas de clientes</h3><p>Consulta experiencias de otros hogares.</p></article><article><span>◷</span><h3>Disponibilidad clara</h3><p>Encuentra un horario que te convenga.</p></article></div></div></section>
+    <section class="home-cta"><div class="container"><div><span class="eyebrow">Siguiente paso</span><h2>¿Listo para encontrar ayuda?</h2></div><a class="button button--teal" href="/buscar-servicio/index.html">Empezar búsqueda <span aria-hidden="true">→</span></a></div></section>
+  </main>
+  <footer data-site-footer></footer>
+</body>
+</html>
