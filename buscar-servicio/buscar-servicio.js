@@ -18,5 +18,5 @@ form?.addEventListener("submit", (event) => {
   event.preventDefault();
   const data = new FormData(form);
   sessionStorage.setItem("hogario-selected-service", data.get("servicio"));
-  window.location.href = window.Hogario.url(`/resultados/?${new URLSearchParams(data).toString()}`);
+  window.location.href = window.Hogario.url(`/resultados/index.html?${new URLSearchParams(data).toString()}`);
 });
